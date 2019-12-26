@@ -1,13 +1,14 @@
 .side-bar
   .side-header
     .side-header__box
-      %p.side-header__box__username ユーザー名
+      %p.side-header__box__username
+        =current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__new-group
           = link_to '#' do
             = icon('fas', 'edit', class: 'icon')
         %li.side-header__box__edit-user
-          = link_to '#' do
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .group-list
     = link_to "#" do
