@@ -13,7 +13,7 @@ Things you may want to cover:
 
 * Database creation
 
-## groups_usersテーブル
+## group_userテーブル
 
 |Column|Type|Options|
 |------|----|-------|

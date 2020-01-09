@@ -45,13 +45,14 @@ $btn-color: #38aef0;
       text-decoration: none;
     }
     .group {
-      color: #ffffff;
       font-weight: bold;
       margin-bottom: 40px;
       &__group-name {
+        color: #ffffff;
         font-size: 15px;
       }
       &__group-last-message {
+        color: #ffffff;
         font-size: 11px;
         margin-top: 5px;
       }
