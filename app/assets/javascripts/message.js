@@ -1,39 +1,39 @@
 $(function(){
 
-  var buildHTML = function(message) {
-    var message_infoTemplate = `<div class="message" data-message-id=` + message.id + `>` +
-      `<div class="message__info">` + 
-        `<div class="message__info--user-name">` + 
-        message.user_name + 
-        `</div>` + 
-        `<div class="message__info--date">` + 
-        message.created_at + 
-        `</div>` + 
-      `</div>`;
+  function buildHTML(message) {
+    var message_infoTemplate = `<div class="message" data-message-id=${message.id}>
+      <div class="message__info">
+        <div class="message__info--user-name"> 
+        ${message.user_name}
+        </div>
+        <div class="message__info--date">
+        ${message.created_at}
+        </div>
+      </div>`;
 
     if (message.content && message.image) {
-      html = message_infoTemplate +
-        `<div class="message__text">` + 
-          `<p class="message__text__content">` + 
-          message.content + 
-          `</p>` + 
-          `<img class="message__text__content--image", src=` + message.image + `>` + 
-        `</div>` + 
-      `</div>`
+      html = `${message_infoTemplate}
+        <div class="message__text">
+          <p class="message__text__content"> 
+          ${message.content}
+          </p>
+          <img class="message__text__content--image", src=${message.image}>
+        </div>
+      </div>`
     } else if (message.content) {
-      html = message_infoTemplate +
-        `<div class="message__text">` + 
-          `<p class="message__text__content">` + 
-          message.content + 
-          `</p>` + 
-        `</div>` + 
-      `</div>`
+      html = `${message_infoTemplate}
+        <div class="message__text">
+          <p class="message__text__content">
+          ${message.content}
+          </p>
+        </div>
+      </div>`
     } else if (message.image) {
-      html = message_infoTemplate +
-        `<div class="message__text">` + 
-          `<img class="message__text__content--image", src=` + message.image + `>` + 
-        `</div>` + 
-      `</div>`
+      html = `${message_infoTemplate}
+      <div class="message__text">
+        <img class="message__text__content--image", src=${message.image}>
+      </div>
+    </div>`
     };
     return html;
   };
