@@ -86,7 +86,7 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert("メッセージの同期に失敗しました");
     });
   };
 
